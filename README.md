@@ -116,7 +116,7 @@ For compilation errors, ensure all dependencies are properly installed.
 
 This project originated from the programming assignment of the Introduction to Computer Systems (ICS) course in the Department of Computer Science and Technology, Nanjing University.
 
-For the guide of this programming assignment, refer to https://nju-projectn.github.io/ics-pa-gitbook/ics2024/
+For the guide of the programming assignment, refer to https://nju-projectn.github.io/ics-pa-gitbook/ics2024/
 
 The following subprojects/components are included:
 * [NEMU](https://github.com/NJU-ProjectN/nemu)
