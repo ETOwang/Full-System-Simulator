@@ -54,8 +54,7 @@ extern void __am_gpu_config(AM_GPU_CONFIG_T *cfg);
 void init_fs()
 {
   // TODO: initialize the size of /dev/fb
-  
-  for (int i = FD_STDERR + 1; i < LENGTH(file_table); i++)
+  for (int i = FD_STDERR + 1; i < sizeof(file_table) / sizeof(Finfo); i++)
   {
     if (strcmp(file_table[i].name, "/dev/fb") == 0)
     {
@@ -68,7 +67,7 @@ void init_fs()
 
 int fs_open(const char *pathname, int flags, int mode)
 {
-  for (int i = 0; i < LENGTH(file_table); i++)
+  for (int i = 0; i < sizeof(file_table) / sizeof(Finfo); i++)
   {
     if (strcmp(pathname, file_table[i].name) == 0)
     {
